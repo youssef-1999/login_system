@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login System</title>
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="py-4">
+    <div class="container w-50 py-4 mx-auto custom_container  ">
+      <h1 class="text-white text-center mb-4">Smart Login System</h1>
+      <div id="registered" class="text-white text-center "></div>
+      <div class="form-group mb-3">
+        <input
+          type="text"
+          name="Name"
+          oninput="nameValidation()"
+          id="signupName"
+          class="form-control"
+          placeholder="Enter Your Name"
+        />
+        <div class="alert alert-danger d-none" id="error">
+          Please enter a valid input[A-Za-z]
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <input
+          type="email"
+          name="email"
+          oninput="emailValidation()"
+          id="Signupemail"
+          class="form-control"
+          placeholder="Enter Your Email"
+        />
+        <div class="alert alert-danger d-none" id="errorEmail">
+          Please enter a valid email
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <input
+          type="password"
+          name="password"
+          oninput="passValidation()"
+          id="Signuppassword"
+          class="form-control"
+          placeholder="Enter Your password"
+        />
+        <label for="check" class="text-white">Show Password</label>
+        <input
+          type="checkbox"
+          id="check"
+          onclick="showPassword()"
+          class="text-white"
+          id=""
+        />
+        <div class="alert alert-danger d-none" id="errorPass">
+          Please enter a password letters&numbers [3-20] without symbols
+        </div>
+      </div>
+      <button class="btn btn-outline-info w-100 mb-3" onclick="createUsers()">
+        Sign up
+      </button>
+      <div class="text-center text-success d-none" id="sucessmsg">Success</div>
+      <div class="d-flex justify-content-center align-items-center">
+        <span class="text-white me-3">You have an account</span>
+        <a href="../index.html" class="text-white"> Sign In</a>
+      </div>
+    </div>
+    <script src="../Java/java.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login System</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="py-4">
+    <div class="container w-50 py-4 mx-auto custom_container">
+      <h1 class="text-white text-center mb-4">Smart Login System</h1>
+      <div class="alert alert-danger d-none text-center" id="loginError"></div>
+      <div class="form-group mb-3">
+        <input
+          type="email"
+          name="email"
+          oninput="checkEmail()"
+          id="loginEmail"
+          class="form-control"
+          placeholder="Enter Your Email"
+          required
+        />
+      </div>
+      <div class="form-group mb-3">
+        <input
+          type="password"
+          name="password"
+          oninput="passValidation()"
+          id="loginPassword"
+          class="form-control"
+          placeholder="Enter Your password"
+        />
+        <div class="alert alert-danger d-none" id="errorPass">
+          Please enter a password letters&numbers [3-20] without symbols
+        </div>
+        <label for="check" class="text-white">Show Password</label>
+        <input
+          type="checkbox"
+          id="check"
+          onclick="showPassword()"
+          class="text-white"
+          id=""
+        />
+      </div>
+ 
+        ><button
+          class="btn btn-outline-info form-control mb-3"
+          onclick="checkLocalStorage()"
+        >
+          Login
+        </button>
+      >
+      <div class="d-flex justify-content-center align-items-center">
+        <span class="text-white me-3">Don't have an account</span>
+        <a href="./Pages/signup.html" class="text-white"> Sign Up</a>
+      </div>
+    </div>
+    <script src="Java/java.js"></script>
+  </body>
+</html>
