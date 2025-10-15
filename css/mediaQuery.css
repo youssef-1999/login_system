@@ -1,0 +1,69 @@
+/* ==========================
+   mediaquery.css
+   ========================== */
+
+/* 💻 Default: Desktop (≥992px)
+   Already handled by style.css, so only special tweaks below if needed */
+@media (min-width: 992px) {
+  .custom_container {
+    width: 50%;
+  }
+}
+
+/* 📱 Mobile: up to 576px */
+@media (max-width: 576px) {
+  body {
+    padding: 10px;
+  }
+
+  .custom_container {
+    width: 95% !important;
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .d-flex span {
+    margin-bottom: 5px;
+  }
+}
+
+/* 📱 Tablet: 577px–768px */
+@media (min-width: 577px) and (max-width: 768px) {
+  .custom_container {
+    width: 75% !important;
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+}
+
+/* 💻 Small Laptop: 769px–991px */
+@media (min-width: 769px) and (max-width: 991px) {
+  .custom_container {
+    width: 60% !important;
+  }
+}
